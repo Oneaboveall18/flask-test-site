@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Site</title>
+</head>
+  <style>
+    body {
+      background-color: #804674;
+    }
+    h1 {
+      font-size: 35px;
+      text-align: center;
+    }
+    h2{
+      text-align: center;
+    }
+    img {  
+    text-align: center;
+    width: 100%;
+    }
+    button {
+      text-align: center;
+      margin: 0 auto;
+    }
+  </style>
+<body>
+  <h1>{{company_name}} is OP</h1>
+  <img src="https://images.unsplash.com/photo-1677492691756-a3433e656ea6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=852&q=80">
+  <h2>About AP</h2>
+  <p>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor delectus laboriosam sit voluptatem vero, facere commodi eos id doloribus rem totam rerum deleniti obcaecati consequuntur reprehenderit sed voluptatum? Voluptate deserunt, dolorem accusamus totam magnam recusandae nam quo error veniam consectetur dignissimos, ullam molestiae distinctio illo voluptatibus eveniet optio, quod magni sint unde. Repellendus excepturi nemo iste corrupti placeat labore quia enim similique adipisci accusamus porro repudiandae unde, magnam, ex cumque blanditiis modi asperiores commodi? Incidunt obcaecati atque excepturi alias labore accusantium mollitia sunt eum sapiente recusandae laudantium ipsum exercitationem, tenetur, vel neque, rerum quis possimus perspiciatis praesentium esse! Tempore, doloremque!
+  </p>
+  <h2>Open Positions</h2>
+  <div>
+    {% for job in jobs %}
+    <div>
+      <h4>{{job['title']}}</h4>
+      <div><b>Location:</b> {{job['location']}}</div>
+      <div><b>Salary:</b>{{job['salary']}}</div>
+    </div><br>
+    {% endfor %}
+  </div>
+  <p>TODO - Show the jobs here</p>
+  <button>Contact us</button>
+</body>
+</html>
